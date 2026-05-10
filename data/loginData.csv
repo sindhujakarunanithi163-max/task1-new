@@ -1,0 +1,12 @@
+# Login test data
+# Columns: testCase, username, password, expectedResult, expectedMessage
+testCase,username,password,expectedResult,expectedMessage
+Valid admin login,qa_admin@yourapp.com,QaAdmin@123,success,Welcome
+Valid standard login,qa_user@yourapp.com,QaUser@123,success,Welcome
+Invalid password,qa_user@yourapp.com,WrongPass!,failure,Invalid credentials
+Invalid username,nouser@yourapp.com,QaUser@123,failure,Invalid credentials
+Empty username,,QaUser@123,failure,Username is required
+Empty password,qa_user@yourapp.com,,failure,Password is required
+Both fields empty,,,failure,Username is required
+SQL injection attempt,admin'--,anything,failure,Invalid credentials
+XSS attempt,<script>alert(1)</script>,test,failure,Invalid credentials

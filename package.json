@@ -1,0 +1,27 @@
+{
+  "name": "playwright-hybrid-framework",
+  "version": "1.0.0",
+  "description": "Playwright Hybrid Framework with POM, Fixtures, Data-driven, and Multi-env support",
+  "scripts": {
+    "test": "playwright test",
+    "test:dev": "ENV=dev playwright test",
+    "test:qa": "ENV=qa playwright test",
+    "test:prod": "ENV=prod playwright test",
+    "test:login": "playwright test tests/login.test.ts",
+    "test:dashboard": "playwright test tests/dashboard.test.ts",
+    "test:quote": "playwright test tests/quote.test.ts",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.6",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.0.0",
+    "exceljs": "^4.4.0",
+    "typescript": "^5.4.0"
+  }
+}
